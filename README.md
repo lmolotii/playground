@@ -1,2 +1,1 @@
-# playground
-to play with various technologies
+# Playground

@@ -1,0 +1,29 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "to play with angular",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmolotii/playground.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "leo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmolotii/playground/issues"
+  },
+  "homepage": "https://github.com/lmolotii/playground#readme",
+  "devDependencies": {
+    "karma": "^0.13.8",
+    "katana": "^0.4.3"
+  }
+}
