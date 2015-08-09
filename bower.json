@@ -1,0 +1,24 @@
+{
+  "name": "Playground",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lmolotii/playground",
+  "authors": [
+    "lmolotii <leonid.molotiievskyi@gmail.com>"
+  ],
+  "description": "playground with angular",
+  "main": "index.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3"
+  }
+}
