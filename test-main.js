@@ -1,4 +1,4 @@
-//var allTestFiles = [];
+var allTestFiles = [];
 //var TEST_REGEXP = /(spec|test)\.js$/i;
 
 // Get a list of all the test files to include
