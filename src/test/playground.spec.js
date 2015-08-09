@@ -12,6 +12,5 @@ describe('It should be true', function () {
 describe('expect positive', function () {
     it('Ada', function () {
         expect(true).toBeTruthy();
-
     });
 });
