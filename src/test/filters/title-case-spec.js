@@ -17,7 +17,7 @@ describe('titleCase', function () {
         expect(filter(undefined)).toBeUndefined();
     });
 
-    it('It should return null if null.', function () {
+    it('It should return null if null', function () {
         expect(filter(null)).toBeNull();
     });
 
