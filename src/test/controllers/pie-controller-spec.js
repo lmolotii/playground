@@ -4,14 +4,16 @@
 describe('Pie-controller', function () {
     var $rootscope,
         $scope,
+        dessertManager,
         controller;
 
     beforeEach(function () {
-        module('pie');
+        module('pie','desserts');
         inject(function($injector){
             $rootscope = $injector.get('$rootScope');
             $scope = $rootscope.$new();
-            controller=$injector.get('$controller')("PieController",{$scope: $scope})
+            dessertManager = $injector.get('DessertManager');
+            controller = $injector.get('$controller')("PieController",{$scope: $scope})
         });
 
         $scope.$digest();
@@ -28,10 +30,30 @@ describe('Pie-controller', function () {
 
         describe("Zero balance of slices", function () {
             it('It shouldn\'t reduce 0.', function () {
-                $scope.slices=0;
+                $scope.slices = 0;
                 $scope.eatSlice();
                 expect($scope.slices).toEqual(0);
             });
+        });
+
+        describe('toggleMode', function () {
+            var modeSpy;
+
+            beforeEach(function () {
+                return modeSpy = spyOn(dessertManager, 'mode').and.returnValue('pie');
+            });
+
+            it('It should switch mode to cake whenever the mode is equal to pie.', function () {
+                $scope.toggleMode();
+                expect(modeSpy).toHaveBeenCalledWith("cake");
+            });
+
+            it('It should switch the mode to pie whenever the mode is anything other pie.', function () {
+                modeSpy = modeSpy.and.returnValue("cupcake");
+                $scope.toggleMode();
+                expect(modeSpy).toHaveBeenCalledWith("pie");
+            });
+            
         });
 
     });

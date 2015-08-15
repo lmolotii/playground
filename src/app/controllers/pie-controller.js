@@ -1,6 +1,6 @@
 angular.module('pie',[]).controller('PieController',
-    ['$scope',
-        function($scope){
+    ['$scope','DessertManager',
+        function($scope, dessertManager){
 
             function compareAndWarn(newVal, oldVal) {
                 var props = [];
@@ -31,6 +31,14 @@ angular.module('pie',[]).controller('PieController',
             $scope.eatSlice = function () {
                 if ($scope.slices) {
                     $scope.slices--;
+                }
+            };
+
+            $scope.toggleMode = function(){
+                if (dessertManager.mode() === 'pie') {
+                    dessertManager.mode('cake');
+                } else {
+                    dessertManager.mode('pie');
                 }
             };
 

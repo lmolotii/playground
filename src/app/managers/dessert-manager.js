@@ -9,12 +9,22 @@ angular.module('desserts',[]).value('DessertValues',{
 angular.module('desserts').factory('DessertManager',
     ['DessertValues',
         function(dessertValues) {
-            return {
-                pieFlavors: function() {
-                    return dessertValues.pies.map(function(pie) {
-                        return pie.flavor;
-                    })
+            var currentMode = 'pie';
+            var factory = {};
+
+            factory.pieFlavors = function() {
+                return dessertValues.pies.map(function (pie) {
+                    return pie.flavor;
+                });
+            };
+
+            factory.mode = function(val) {
+                if(!val) {
+                   return currentMode;
                 }
-            }
+                return val === 'pie' ? currentMode = 'cake' :  currentMode = 'pie';
+            };
+
+            return factory;
     }]
 );
