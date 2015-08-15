@@ -14,6 +14,11 @@ angular.module('pie',[]).controller('PieController',
                 return props;
             }
 
+            $scope.$on('pieHasBeenDepleted', function() {
+                $scope.warning = 'Red alert!';
+                $scope.slices = 0;
+            });
+
             $scope.$watch('nutritionalValue', function(newVal,oldVal) {
                 var props = compareAndWarn(newVal,oldVal);
                 if(props && props.length) {
