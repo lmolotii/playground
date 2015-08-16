@@ -7,6 +7,10 @@ Dessert.Controllers.controller('TableController',
                 });
             };
 
+            $scope.getSilverWare = function(id) {
+                return { '0': 'Fork', '1': 'Spoon', '2': 'Knife'}[String(id)] || 'None';
+            };
+
             $scope.pies = null;
 
 }]);

@@ -40,6 +40,24 @@ describe('Table controller', function () {
         });
     });
 
+    describe('Getters', function () {
+        it('It should return a fork for 0.', function () {
+            expect($scope.getSilverWare(0)).toEqual("Fork");
+        });
+
+        it('It should return a spoon for 1.', function () {
+            expect($scope.getSilverWare(1)).toEqual("Spoon");
+        });
+
+        it('It should return a knife for 2.', function () {
+            expect($scope.getSilverWare(2)).toEqual("Knife");
+        });
+
+        it('It should return none in other cases.', function () {
+            expect($scope.getSilverWare(3)).toEqual("None");
+        });
+    });
+
     describe('Initialization', function () {
         it('It should instantiate pies to null.', function () {
             expect($scope.pies).toBeNull();
