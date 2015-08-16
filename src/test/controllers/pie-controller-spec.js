@@ -8,7 +8,9 @@ describe('Pie-controller', function () {
         controller;
 
     beforeEach(function () {
-        module('pie','desserts');
+        //module('pie','desserts');
+        module.apply(this, Dessert.Dependencies);
+
         inject(function($injector){
             $rootscope = $injector.get('$rootScope');
             $scope = $rootscope.$new();

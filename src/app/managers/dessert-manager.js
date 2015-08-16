@@ -1,4 +1,4 @@
-angular.module('desserts',[]).value('DessertValues',{
+Dessert.Services.value('DessertValues',{
    pies: [
        {flavor: 'Cherry', score: 6},
        {flavor: 'Apple', score: 7.5},
@@ -6,7 +6,7 @@ angular.module('desserts',[]).value('DessertValues',{
    ]
 });
 
-angular.module('desserts').factory('DessertManager',
+Dessert.Services.factory('DessertManager',
     ['DessertValues',
         function(dessertValues) {
             var currentMode = 'pie';

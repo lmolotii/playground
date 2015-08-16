@@ -19,6 +19,7 @@ module.exports = function(config) {
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/angular-resource/angular-resource.js',
+        'src/app/dessert.js',
         'test-main.js',
         'src/**/*.js',
         'src/**/*.html'
@@ -37,7 +38,7 @@ module.exports = function(config) {
     },
 
     ngHtml2JsPreprocessor: {
-        moduleName: 'templates'
+        moduleName: 'dessert.templates'
     },
 
     // test results reporter to use

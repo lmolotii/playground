@@ -8,7 +8,7 @@ describe('nsTextAndSub', function () {
         $compile;
 
     beforeEach(function () {
-        module('templates','directives');
+        module.apply(this, Dessert.Dependencies);
         inject(function ($injector) {
             $rootScope = $injector.get('$rootScope');
             $compile = $injector.get('$compile');

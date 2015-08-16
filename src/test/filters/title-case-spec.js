@@ -6,7 +6,7 @@ describe('titleCase', function () {
         filter;
 
     beforeEach(function () {
-        module('filters');
+        module.apply(this, Dessert.Dependencies);
         inject(function ($injector) {
             $filter = $injector.get('$filter');
             filter = $filter('titleCase');

@@ -7,7 +7,7 @@ describe('nsStateful', function () {
         simpleHtml = '<button ns-stateful="red"></button>';
 
     beforeEach(function () {
-        module('directives');
+        module.apply(this, Dessert.Dependencies);
         inject(function ($injector) {
             $rootScope = $injector.get('$rootScope');
             $scope = $rootScope.$new();

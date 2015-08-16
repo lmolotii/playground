@@ -1,4 +1,4 @@
-angular.module('pie',[]).controller('PieController',
+Dessert.Controllers.controller('PieController',
     ['$scope','DessertManager',
         function($scope, dessertManager){
 

@@ -1,4 +1,4 @@
-angular.module('directives').directive('nsTextAndSub',
+Dessert.Templates.directive('nsTextAndSub',
     function () {
         return {
             restrict: 'E',

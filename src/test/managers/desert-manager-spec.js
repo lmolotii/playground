@@ -3,7 +3,7 @@ describe('DessertManager', function () {
         factory;
 
     beforeEach(function () {
-        module('desserts');
+        module.apply(this, Dessert.Dependencies);
         inject(function ($injector) {
             values = $injector.get('DessertValues');
             factory = $injector.get('DessertManager');

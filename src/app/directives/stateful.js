@@ -1,4 +1,4 @@
-angular.module('directives',[]).directive('nsStateful',
+Dessert.Directives.directive('nsStateful',
     function () {
         return  {
             restrict: 'A',
